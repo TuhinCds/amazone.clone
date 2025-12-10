@@ -6,6 +6,10 @@
 .product-image img {
     height: 17vh !important;
 }
+#UpDownHeader {
+    margin-right: 5px;
+
+}
 }
 @media (max-width: 768px) {
   .search-wraper {
@@ -95,4 +99,10 @@
 body {
         grid-template-columns: 0px 1fr;
     }
+    .header-wraper {
+    height: 200px;
+}
+.header-wraper.close{
+    height: 60px;
+}
 }

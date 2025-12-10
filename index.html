@@ -20,7 +20,7 @@
     <div id="overlyMobile"></div>
     <div id="overly"></div>
     <header class="header" id="header">
-        <div class="header-wraper">
+        <div class="header-wraper" id="headerWraper">
             <div class="header-row1">
                 <div class="logo">
                     <button id="ToggleSidebar">
@@ -72,9 +72,12 @@
             </div>
             <div class="header-row2">
                 <div class="search-mobile">
-                    <div class="search-container-mobile">
-                        <input type="text" placeholder="Search product....">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div class="search-container-parent">
+                        <div class="search-container-mobile">
+                            <input type="text" placeholder="Search product....">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <button id="UpDownHeader"><i class="fa-solid fa-chevron-up"></i></button>
                     </div>
                     <div class="search-suggetion">
                         
@@ -82,7 +85,7 @@
                 </div>
             </div>
             <div class="header-row3">
-                <button id="ToggleMenu"><i class="fa-solid fa-bars"></i></button>
+                <button id="ToggleMenu"><i class="fa-solid fa-xmark"></i></button>
                 <div class="suggest-btns">
                     <div class="suggest-btns-wraper">
                     <button>All</button>
@@ -112,13 +115,20 @@
                     <button>Change Address</button>
                 </div>
             </div>
+            <div class="header-row6">
+                <div class="show-header-pop">
+                    <p>Show Header <i class="ri-slideshow-3-fill"></i></p>
+                </div>
+                <button id="CloseHeader"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
         </div>
     </header>
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-wraper">
-            <button id="CloseSidebar">
+        <button id="CloseSidebar">
                 <i class="fa-solid fa-xmark"></i>
             </button>
+        <div class="sidebar-wraper">
+            
             <div class="sidebar-content-parent">
                 <div class="sidebar-content">
                 <div class="sidebar-header">
@@ -154,7 +164,7 @@
                             <li><a href="#" class="SeeAllTopDepertmentsbtn">See all <span><i class="fa-solid fa-angle-down"></i></span></a></li>
 
                             <ul class="All-topdepartments">
-                                <li><a href="#">Amazone Miusic</a></li>
+                                <li><a href="#">Amazone Music</a></li>
                                 <li><a href="#">Prime Video</a></li>
                                 <li><a href="#">Books</a></li>
                                 <li><a href="#">Echo & Alexa</a></li>
@@ -169,11 +179,14 @@
     </aside>
         <aside id="sidebarDesk"class="sidebar-Desk">
             <div class="sidebarDesk-wraper">
-                <button id="sidebarDeskClose">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+                <div class="search-container-sidebar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="ri-search-line"></i></button>
+                </div>
                 <div class="sidebarDesk-content">
-
+                    <div class="sidebarDesk-links">
+                        <div id="sidebarContentLinks"></div>
+                    </div>
                 </div>
             </div>
         </aside>

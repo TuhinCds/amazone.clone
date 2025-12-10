@@ -1,6 +1,6 @@
 .sidebar-wraper {
     position: relative;
-    overflow: auto;
+   
 }
 #CloseSidebar {
     position: absolute;
@@ -21,6 +21,7 @@
     grid-area: sidebarDesk;
     background: var(--bg-color);
     box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.102);
+    white-space: nowrap;
 }
 .sidebar-Desk {
     position: relative;
@@ -41,7 +42,7 @@
     background: rgba(0, 0, 0, 0.042);
 }
 .sidebarDesk-wraper {
-
+    
 }
 #sidebarDesk {
     
@@ -115,4 +116,106 @@ ul {
 .All-topdepartments.open {
     height: 400px;
     border-top: 1px solid rgba(0, 0, 0, 0.061);
+}
+#sidebarContentLinks {
+    margin-top: 10px;
+    padding: 10px;
+}
+#sidebarContentLinks .sidebarDeskLinksUL1 li{
+    margin-left: 10px;
+}
+#sidebarContentLinks .sidebarDeskLinksUL1 {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    margin-left: 2px !important;
+    margin: 9px 0;
+}
+.sidebarDeskLinksUl {
+    overflow: hidden;
+
+}
+#sidebarContentLinks .sidebarDeskLinksUL1 li button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    margin: 6px 0;
+    color: rgba(0, 0, 0, 0.795);
+    cursor: pointer;
+}
+.sidebarDesk-wraper {
+    overflow: auto;
+}
+#sidebarDesk {
+    overflow: auto;
+}
+.search-container-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 10px 13px;
+    gap: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.064);
+    white-space: nowrap;
+}
+.search-container-sidebar input{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.075);
+    border-radius: 2px;
+}
+.search-container-sidebar input , .search-container-sidebar button {
+     padding: 7px;
+     border: none;
+     border-radius: 2px;
+     
+}
+.search-container-sidebar button {
+    width: 40px;
+    background: rgba(0, 0, 0, 0.099);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebarDeskLinksUL1 li button div {
+    padding: 4px 10px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.sidebarDeskLinksUL1 li button .tranding {
+    background: rgba(0, 255, 157, 0.257);
+    color: rgba(0, 172, 164, 0.847);
+    display: inline-block;
+    font-size: .6rem;
+
+}
+.sidebarDeskLinksUL1 li button .new {
+    background: rgba(255, 115, 0, 0.144);
+    color: rgba(255, 98, 0, 0.862);
+    display: inline-block;
+    font-size: .6rem;
+
+}
+.sidebarDeskLinksUL1 li button .old {
+    background: rgba(255, 0, 0, 0.154);
+    color: rgba(255, 0, 0, 0.651);
+    display: inline-block;
+    font-size: .6rem;
+
+}
+.sidebarDeskLinksUL1 li button .updated {
+    background: rgba(0, 128, 255, 0.196);
+    color: rgba(0, 81, 255, 0.734);
+    display: inline-block;
+    font-size: .6rem;
+
+}
+.sidebarDeskLinksUL1 li button .newSpace {
+    background: rgba(255, 115, 0, 0.346);
+    display: inline-block;
+    width: 13px !important;
+    height: 13px !important;
+    margin-left: 10px;
+    padding: 0;
 }

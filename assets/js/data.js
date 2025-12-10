@@ -44,3 +44,57 @@ export const Products = [
         stock: 10,
     },
 ]
+
+export const sidebarDeskLinks = [
+    {
+        name: 'Trending',
+        StatusNow: '',
+        links: [
+            { name: 'Mf - Watch' , StatusNow: ''},
+            { name: 'Phone', StatusNow: '' },
+            { name: 'Rex - Headphone' , StatusNow: ''}
+        ]
+    },
+    {
+        name: 'Electronics', StatusNow: '',
+        links: [
+            { name: 'Arduino uno', StatusNow: 'new' },
+            { name: 'LDR', StatusNow: ''},
+            { name: 'Diods', StatusNow: ''},
+            { name: 'LEDs', StatusNow: ''},
+            { name: 'capacitors', StatusNow: 'new'},
+            { name: 'transitors', StatusNow: ''},
+            { name: 'registors', StatusNow: 'updated'},
+            { name: 'Display', StatusNow: ''}
+        ]
+
+    },
+    {
+        name: 'Phone',
+        StatusNow: '',
+        links:[
+            { name: 'Realme' , StatusNow: ''},
+            { name: 'Readmi', StatusNow: ''},
+            { name: 'Itel', StatusNow: ''},
+            { name: 'Apple IOS', StatusNow: 'tranding'},
+            { name: 'benco', StatusNow: ''},
+            { name: 'Honor', StatusNow: ''}
+        ]
+    },
+    {
+        name: 'Books',
+        StatusNow: '',
+        links:[
+            { name: "Run brain", StatusNow: ''},
+            { name: "English learn book", StatusNow: 'old'}
+        ]
+    },
+    {
+        name: 'Headphones',
+        StatusNow: '',
+        links:
+        [
+            { name: 'PDR 13 Headphone ', StatusNow: 'new'}
+        ]
+    }
+]

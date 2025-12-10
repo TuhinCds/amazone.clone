@@ -3,13 +3,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+    transition: height .4s;
+
 }
+
 .header-row1 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     height: auto;
     margin-top: 0px;
     height: 68px;
@@ -38,10 +41,11 @@
     margin-top: 20px;
 }
 .logo img {
-    width: 210px;
+    width: 150px;
     height: 40px;
     object-fit: cover;
-    margin-left: -30px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 .cart-icon-container button {
@@ -347,4 +351,68 @@
 .header-texts-sidebar p:nth-child(2) {
     font-size: 1.9rem;
     color: rgba(255, 255, 255, 0.693);
+}
+.search-container-parent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#UpDownHeader {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.197);
+    color: var(--bg-color);
+    transition: background .4s;
+    cursor: pointer;
+}
+#UpDownHeader:hover {
+    background: rgba(0, 117, 43, 0.438);
+}
+.header-row6{
+    width: 100%;
+    background: rgb(0, 115, 44);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    
+}
+.header-row6.open {
+    display: flex;
+}
+.header-row6 button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 6px;
+    background: rgba(255, 255, 255, 0.163);
+    color: rgba(255, 255, 255, 0.908);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show-header-pop {
+    
+}
+.show-header-pop p {
+    font-size: .9rem;
+    color: white;
+}
+.header-main-part {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ri-slideshow-3-fill {
+    font-size: 1.1rem;
+}
+#CloseHeader {
+    transition: background .4s;
+    cursor: pointer;
+}
+#CloseHeader:hover {
+    background: rgb(0, 144, 48);
 }

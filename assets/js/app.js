@@ -1,4 +1,4 @@
-import {Products} from './data.js'
+import {Products, sidebarDeskLinks} from './data.js'
 
 const ToggleSidebar = document.getElementById('ToggleSidebar')
 const sidebar = document.getElementById('sidebar')
@@ -49,9 +49,7 @@ const sidebarDeskCloseFunc = () => {
          SidebarIcon.classList.add("fa-xmark")
     }
 }
-sidebarDeskClose.addEventListener('click', () => {
-    sidebarDeskCloseFunc()
-})
+
 ToggleMenu.addEventListener('click', () => {
     sidebarDeskCloseFunc()
 })
@@ -119,4 +117,82 @@ SeeAllTopDepertmentsbtn.forEach(btn => {
     AllTopdepartments.classList.toggle('open')
 
 })
+})
+const sidebarContentLinks = document.getElementById('sidebarContentLinks')
+
+sidebarDeskLinks.forEach((linkItem, index) => {
+    let createData = document.createElement('div')
+    createData.classList.add('sidebarDeskLinksUl')
+    createData.innerHTML = `
+        <div class="sidebarDeskLinksWraper">
+            <p>${linkItem.name}</p>
+            <ul class="sidebarDeskLinksUL1">
+
+            </ul>
+        </div>
+    `
+    sidebarContentLinks.appendChild(createData)
+
+    const createDataUlSelect = createData.querySelector('.sidebarDeskLinksUL1')
+    linkItem.links.forEach((links, index) => {
+        let createDataL = document.createElement('li')
+        createDataL.innerHTML =  `
+            <button>
+                <span>${links.name.length > 15 ? links.name.slice(undefined, 10) + '...' : links.name}</span>
+                <div class="${links.name.length > 15 ? links.StatusNow.toLowerCase() + "Space" : links.StatusNow.toLowerCase()}">${links.name.length > 15 ? "" : links.StatusNow.toLowerCase()}</div>
+            </button>
+        `
+        createDataUlSelect.appendChild(createDataL)
+    })
+})
+const headerWraper = document.getElementById('headerWraper')
+const UpDownHeader = document.getElementById('UpDownHeader')
+const headerRow1 = document.querySelector(".header-row1")
+const headerRow2 = document.querySelector(".header-row2")
+const headerRow3 = document.querySelector(".header-row3")
+const headerRow4 = document.querySelector(".header-row4")
+const headerRow5 = document.querySelector(".header-row5")
+const headerRow6 = document.querySelector(".header-row6")
+
+const CloseHeader = document.getElementById('CloseHeader')
+
+const DownUpHeader = () => {
+    headerWraper.classList.toggle('close')
+    if (headerWraper.classList.contains('close')) {
+        headerRow1.style.display = "none"
+        headerRow2.style.display = "none"
+        headerRow3.style.display = "none"
+        headerRow4.style.display = "none"
+        headerRow5.style.display = "none"
+        headerRow6.style.display = "flex"
+    
+    } else {
+        headerRow1.style.display = "flex"
+        headerRow2.style.display = ""
+        headerRow3.style.display = "flex"
+        headerRow4.style.display = "flex"
+        headerRow5.style.display = "flex"
+        headerRow6.style.display = "none"
+       
+       
+    }
+}
+UpDownHeader.addEventListener('click', () => {
+    DownUpHeader()
+})
+CloseHeader.addEventListener('click', () => {
+    DownUpHeader()
+})
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 600) {
+        headerWraper.classList.remove('close')
+        headerRow1.style.display = "flex"
+        headerRow2.style.display = ""
+        headerRow3.style.display = "flex"
+        headerRow4.style.display = "none"
+        headerRow5.style.display = "flex"
+        headerRow6.style.display = "none"
+    } else {
+        headerRow4.style.display = "flex"
+    }
 })
