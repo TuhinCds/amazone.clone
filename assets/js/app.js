@@ -92,7 +92,7 @@ Products.forEach((product, index) => {
                                                     <option value="5">5</option>
                                                 </select>
                                             </div>
-                                            <button>Add to cart</button>
+                                            <button class="AddToCartBtn" data-product-name="${product.name}">Add to cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -117,6 +117,8 @@ SeeAllTopDepertmentsbtn.forEach(btn => {
     AllTopdepartments.classList.toggle('open')
 
 })
+
+
 })
 const sidebarContentLinks = document.getElementById('sidebarContentLinks')
 
@@ -196,3 +198,16 @@ window.addEventListener('resize', () => {
         headerRow4.style.display = "flex"
     }
 })
+
+const BtnProduct = document.querySelectorAll('.AddToCartBtn')
+   BtnProduct.forEach(btn => {
+     btn.addEventListener('click', () => {
+        alert("coming soon this cart feature !")
+        btn.style.background = "rgb(255, 119, 0)"
+        BtnProduct.forEach(iBtn => {
+            if (iBtn !== btn) {
+                iBtn.style.background = "rgb(255, 191, 0)"
+            }
+        })
+    })
+   })
