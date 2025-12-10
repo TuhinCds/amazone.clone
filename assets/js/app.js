@@ -54,9 +54,44 @@ ToggleMenu.addEventListener('click', () => {
     sidebarDeskCloseFunc()
 })
 
+const SearchProducts1con = document.getElementById('SearchProducts1con')
+const SearchProducts2con = document.getElementById('SearchProducts2con')
+
+let SearchProducts = ""
+
+function InputsData(value) {
+    SearchProducts1con.value = value
+    SearchProducts2con.value = value
+}
+function FilteredProducts() {
+    let FilteredProducts = Products.filter(item => item.product_title.includes(SearchProducts)) 
+    RenderProducts(FilteredProducts)
+}
+SearchProducts1con.addEventListener('input', () => {
+     SearchProducts = SearchProducts1con.value.trim().toLowerCase()
+    setTimeout(() => {
+        InputsData(SearchProducts)
+        FilteredProducts()
+    }, 400)
+})
+SearchProducts2con.addEventListener('input', () => {
+        SearchProducts = SearchProducts2con.value.trim().toLowerCase()
+    setTimeout(() => {
+        InputsData(SearchProducts)
+        FilteredProducts()
+    }, 400)
+
+})
+
+
+
 
 //  Append product in product list
-Products.forEach((product, index) => {
+const RenderProducts = (productsList) => {
+    products.innerHTML = ""
+    productsList.length < 1 ? products.innerHTML = "Not Found !" : ""
+
+    productsList.forEach((product, index) => {
     let createProduct = document.createElement('div')
     createProduct.classList.add('product')
 
@@ -75,7 +110,7 @@ Products.forEach((product, index) => {
                                     <div class="offer">${Math.floor(((product.old_price - product.price) / product.old_price) * 100) < 1 ? "" : Math.floor(((product.old_price - product.price) / product.old_price ) * 100) + '% OFF'} <i class="fa-solid fa-tag"></i></div>
                                 </div>
                                 <div class="product-footer-content">
-                                    <div class="title">Lorem ipsum dolor sit amet consectetur ectetur!</div>
+                                    <div class="title">${product.product_title}</div>
                                     <div class="product-model">${product.model ? 'Model: ' + product.model : ''}</div>
                                     <div class="action-btns">
                                         <div class="solding-products">
@@ -101,6 +136,8 @@ Products.forEach((product, index) => {
 
     products.appendChild(createProduct)
 })
+}
+RenderProducts(Products)
 const SeeAllTopDepertmentsbtn = document.querySelectorAll('.SeeAllTopDepertmentsbtn')
 const AllTopdepartments = document.querySelector('.All-topdepartments')
 
