@@ -69,6 +69,15 @@ export const Products = [
 
 export const sidebarDeskLinks = [
     {
+        name: 'All Products',
+        links: [
+            { name: 'Phone', StatusNow: ''},
+            { name: 'Computer',StatusNow: ''},
+            { name: 'Electronic',StatusNow: ''},
+            { name: 'Cosmetics',StatusNow: ''}
+        ]
+    },
+    {
         name: 'Trending',
         StatusNow: '',
         links: [
