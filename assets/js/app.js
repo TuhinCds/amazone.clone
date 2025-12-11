@@ -64,7 +64,7 @@ function InputsData(value) {
     SearchProducts2con.value = value
 }
 function FilteredProducts() {
-    let FilteredProducts = Products.filter(item => item.product_title.includes(SearchProducts)) 
+    let FilteredProducts = Products.filter(item => item.product_title.includes(SearchProducts) || item.model.toLowerCase().includes(SearchProducts) || String(item.price).includes(SearchProducts))  
     RenderProducts(FilteredProducts)
 }
 SearchProducts1con.addEventListener('input', () => {
